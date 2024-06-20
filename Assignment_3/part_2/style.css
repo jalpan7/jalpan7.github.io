@@ -43,5 +43,5 @@ box-shadow: 2px 2px 5px rgba(0,0,0,0.5),
 /*inset the white shadow top left*/
 inset 2px 2px 3px rgba(255,255,255,0.6),
 /*inset black shadow to the bottom right*/
-inset -2px -2px 3px rgba(0,0,0,0.6),
+inset -2px -2px 3px rgba(0,0,0,0.6);
 }
