@@ -27,12 +27,16 @@ div {
   a 1-pixel vertical offset, a 1-pixel blur radius, and a black color*/
   text-shadow: 1px 1px 1px black;
 
- /*the below code is border*/
+ /*the below code is border of the box*/
  border-radius: 10px;
  border: 1px solid #990000;
-
-
-
-  
+ /*this is for the background of the box*/
+ background-color: red;
+ background-image: linear-gradient(
+  to top left,
+  rgba(0,0,0,0.2),
+  rgba(0,0,0,0.2) 30%,
+  rgba(0,0,0,0)
+ );
 
 }
