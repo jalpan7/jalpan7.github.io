@@ -10,11 +10,29 @@
 
 /* Your CSS below here */
 div {
-
+  /*the is now assign the value to the height and width */
+  /*this set the width of the element to 200 pixel*/
   width: 200px;
+  /*this centers the element horizontally within the container*/
   margin: auto;
+  /*this sets the heihght of each line of the text inside the element to 10 pixel*/
   line-height: 10;
+  /*this sets the font size of text inside the element to 1.1 rem units as asked in the rubric*/
+  font-size: 1.1rem;
+  /*this centers the text horizontally within the element*/
+  text-align: center;
+  /*this sets the color of the text inside the element to white*/
+  color: white;
+  /*this adds a shadow to the text, with a 1-pixel horizontal offset
+  a 1-pixel vertical offset, a 1-pixel blur radius, and a black color*/
+  text-shadow: 1px 1px 1px black;
+
+ /*the below code is border*/
+ border-radius: 10px;
+ border: 1px solid #990000;
 
 
+
+  
 
 }
