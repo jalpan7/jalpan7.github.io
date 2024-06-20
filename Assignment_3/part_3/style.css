@@ -75,3 +75,18 @@ header, footer {
   font-weight: normal;
   font-style: normal;
 }
+
+html {
+  font-family: 'Open Sans' serif;
+  font-size: 10px;
+}
+
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  /*letter spacing for headings*/
+  letter-spacing: 2px;
+}
+h2 {
+  /* this is the approx 32px for sub-headings*/
+  font-size: 3.2rem;
+}
