@@ -1,3 +1,9 @@
+/*
+	Name: Jalpan Patel
+	File: style.html
+	Date: 20 June 2024
+	This is the third part of the Assignment-3.
+*/
 /* General setup */
 
 * {
@@ -43,3 +49,29 @@ header, footer {
 }
 
 /* WRITE YOUR CODE BELOW HERE */
+
+/* font imports */
+/*Added @font-face declarations for Open Sans and Roboto Fonts*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.eot');
+  src: url('fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('fonts/OpenSans-Regular.woff2') format('woff2'),
+       url('fonts/OpenSans-Regular.woff') format('woff'),
+       url('fonts/OpenSans-Regular.ttf') format('truetype'),
+       url('fonts/OpenSans-Regular.svg#opensans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-Bold.eot');
+  src: url('fonts/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+       url('fonts/Roboto-Bold.woff2') format('woff2'),
+       url('fonts/Roboto-Bold.woff') format('woff'),
+       url('fonts/Roboto-Bold.ttf') format('truetype'),
+       url('fonts/Roboto-Bold.svg#roboto') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
