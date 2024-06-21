@@ -110,3 +110,73 @@ p, li {
   /* Adding word spacing for readability */
   word-spacing: 3px;
 }
+/*styling for link*/
+a {
+  outline: none;
+}
+a[href*="http"] {
+  padding-right: 19px;
+  background: url('external-link-52.png') no-repeat 100% 0;
+  background-size: 16px 16px; /* External link icon */
+}
+
+a:link, a:visited {
+  color: #a66; /* Link color matching the header/footer border */
+}
+
+a:focus, a:hover {
+  text-decoration: none; /* Removing underline on hover and focus */
+}
+
+a:active {
+  color: transparent;
+  text-shadow: 0px 0px 1px #f00,
+               0px 0px 2px #f00,
+               0px 0px 3px black,
+               0px 0px 4px black; /* Text shadow for active links */
+}
+
+/* lists: extra margin top and bottom to make it
+always have the same spacing as with paragraphs */
+ul, ol {
+  margin: 1.6rem 0; /* Margin using rem units */
+}
+
+ul {
+  list-style-type: square; /* Custom list style for unordered lists */
+}
+
+ol {
+  list-style-type: lower-latin; /* Custom list style for ordered lists */
+}
+
+/* nav menu */
+nav ul {
+  padding-left: 0;
+  margin-top: 0.8rem; /* Margin using rem units */
+}
+
+nav li {
+  list-style-type: none; /* Removing default list style for nav items */
+  margin-bottom: 2rem; /* Margin using rem units */
+}
+
+nav li a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  line-height: 3; /* Line height for nav items */
+  text-align: center;
+  font-size: 2.5rem; /* Font size using rem units */
+  border: 1px solid #a66; /* Border matching the theme color */
+}
+
+nav li a:focus, nav li a:hover {
+  color: white;
+  background: #a66; /* Hover and focus state for nav links */
+}
+
+nav li a:active {
+  color: white;
+  background: black; /* Active state for nav links */
+}
