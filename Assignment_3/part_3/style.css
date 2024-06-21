@@ -95,3 +95,18 @@ h2 {
   /*this is approximate 32px for sub-headings*/
   font-size: 3.2rem;
 }
+section h2 + p {
+  /* Indenting the first paragraph after each heading */
+  text-indent: 20px; 
+}
+
+p, li {
+  /* Approx 16px for body text */
+  font-size: 1.6rem;
+  /* Line height adjustment for readability */
+  line-height: 1.5; 
+  /* Letter spacing for body text */
+  letter-spacing: 0.5px;
+  /* Adding word spacing for readability */
+  word-spacing: 3px;
+}
