@@ -86,7 +86,12 @@ h1, h2 {
   /*letter spacing for headings*/
   letter-spacing: 2px;
 }
+h1 {
+  /* this is approximate 50px for a large heading */
+  font-size: 5rem;
+  text-align: center;
+}
 h2 {
-  /* this is the approx 32px for sub-headings*/
+  /*this is approximate 32px for sub-headings*/
   font-size: 3.2rem;
 }
