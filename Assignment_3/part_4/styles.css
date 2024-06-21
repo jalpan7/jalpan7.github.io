@@ -76,5 +76,10 @@
   }
 
   .feature {
+    /*this sets the width of the image*/
       width: 200px;
+    /*float the image to the left side of the page*/
+      float: left;
+    /*this sets the margins aroung the image*/
+      margin: 0 20px 20px 0;
   }
