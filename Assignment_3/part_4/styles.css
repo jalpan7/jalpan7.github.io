@@ -1,4 +1,10 @@
-body {
+/*
+	Name: Jalpan Patel
+	File: index.html
+	Date: 20 June 2024
+	This is the third part of the Assignment-3.
+*/
+  body {
     background-color: #fff;
     color: #333;
     margin: 0;
@@ -21,6 +27,9 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     max-width: 980px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
   }
   
   nav {
