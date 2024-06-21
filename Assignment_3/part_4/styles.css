@@ -22,25 +22,39 @@
     margin: 0 auto;
     max-width: 980px;
   }
-  
+  /*Styling for the grid of the container*/
   .grid {
     margin: 0 auto;
+    /*center-align the grid container*/
     padding: 0 20px;
+    /*add the padding to the left and the right of grid container*/
     max-width: 980px;
+    /*gives the maximam width for the grid.*/
     display: grid;
+    /*use the grid layout*/
     grid-template-columns: 3fr 1fr;
+    /*this will creat the new columns*/
     gap: 20px;
+    /*sets the gap between grid items*/
   }
   
   nav {
     background-color: #000;
     padding: .5em;
+    /*Poaition at the top of the viewport*/
+    top: 0;
+    /*Make the navigation bar sticky*/
+    position: sticky;
   }
   
   nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
+    /*this distributs items even along the row*/
+    justify-content: space-between;
+    /*this uses flexbox for the layout*/
+    display: flex;
   }
   
   nav a {
@@ -53,6 +67,12 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    /*used the type of layout and that is grid layout*/
+    display: grid;
+    /*set gap between grid items*/
+    gap: 1px;
+    /*this creates the two equal columns*/
+    grid-template-columns: 1fr 1fr;
   }
 
   .feature {
