@@ -87,7 +87,7 @@ h1, h2 {
   letter-spacing: 2px;
 }
 h1 {
-  /* this is approximate 50px for a large heading */
+  /*this is approximate 50px for a large heading */
   font-size: 5rem;
   text-align: center;
 }
@@ -96,36 +96,39 @@ h2 {
   font-size: 3.2rem;
 }
 section h2 + p {
-  /* Indenting the first paragraph after each heading */
+  /*Indenting the first paragraph after each heading */
   text-indent: 20px; 
 }
 
 p, li {
-  /* Approx 16px for body text */
+  /*Approx 16px for body text */
   font-size: 1.6rem;
-  /* Line height adjustment for readability */
+  /*Line height adjustment for readability */
   line-height: 1.5; 
-  /* Letter spacing for body text */
+  /*Letter spacing for body text */
   letter-spacing: 0.5px;
-  /* Adding word spacing for readability */
+  /*Adding word spacing for readability */
   word-spacing: 3px;
 }
-/*styling for link*/
+/*styling for link image*/
 a {
   outline: none;
 }
 a[href*="http"] {
   padding-right: 19px;
   background: url('external-link-52.png') no-repeat 100% 0;
-  background-size: 16px 16px; /* External link icon */
+  /*External link icon */
+  background-size: 16px 16px;
 }
 
 a:link, a:visited {
-  color: #a66; /* Link color matching the header/footer border */
+  /*Link color matching the header/footer border */
+  color: #a66;
 }
 
 a:focus, a:hover {
-  text-decoration: none; /* Removing underline on hover and focus */
+  /*Removing underline on hover and focus */
+  text-decoration: none;
 }
 
 a:active {
@@ -133,50 +136,61 @@ a:active {
   text-shadow: 0px 0px 1px #f00,
                0px 0px 2px #f00,
                0px 0px 3px black,
-               0px 0px 4px black; /* Text shadow for active links */
+               0px 0px 4px black;
 }
 
-/* lists: extra margin top and bottom to make it
+/*lists: extra margin top and bottom to make it
 always have the same spacing as with paragraphs */
 ul, ol {
-  margin: 1.6rem 0; /* Margin using rem units */
+  /*Margin using rem units */
+  margin: 1.6rem 0;
 }
 
 ul {
-  list-style-type: square; /* Custom list style for unordered lists */
+  /*Custom list style for unordered lists */
+  list-style-type: square;
 }
 
 ol {
-  list-style-type: lower-latin; /* Custom list style for ordered lists */
+  /*Custom list style for ordered lists */
+  list-style-type: lower-latin;
 }
 
-/* nav menu */
+/*nav menu */
 nav ul {
   padding-left: 0;
-  margin-top: 0.8rem; /* Margin using rem units */
+  /*Margin using rem units */
+  margin-top: 0.8rem;
 }
 
 nav li {
-  list-style-type: none; /* Removing default list style for nav items */
-  margin-bottom: 2rem; /* Margin using rem units */
+  /*Removing default list style for nav items */
+  list-style-type: none;
+  /*Margin using rem units */
+  margin-bottom: 2rem;
 }
 
 nav li a {
   text-decoration: none;
   display: inline-block;
   width: 100%;
-  line-height: 3; /* Line height for nav items */
+  /*Line height for nav items */
+  line-height: 3;
   text-align: center;
-  font-size: 2.5rem; /* Font size using rem units */
-  border: 1px solid #a66; /* Border matching the theme color */
+  /*Font size using rem units */
+  font-size: 2.5rem;
+  /*Border matching the theme color */
+  border: 1px solid #a66;
 }
 
 nav li a:focus, nav li a:hover {
   color: white;
-  background: #a66; /* Hover and focus state for nav links */
+  /*Hover and focus state for nav links */
+  background: #a66;
 }
 
 nav li a:active {
   color: white;
-  background: black; /* Active state for nav links */
+  /*Active state for nav links */
+  background: black; 
 }
