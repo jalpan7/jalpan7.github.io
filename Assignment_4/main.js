@@ -17,3 +17,20 @@ const storyText = 'It was 94 degrees Fahrenheit outside, so :insertx: went for a
 const insertX = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
 const insertY = ["the soup kitchen", "Disneyland", "the White House"];
 const insertZ = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and crawled away"];
+
+// Adding Event listener for the "Generate random story" button.
+randomize.addEventListener('click', result);
+
+function result() {
+    // Create a newq stroy by copying the template story
+    let newStory = storyText;
+    // Select random values from the arrays 
+    const xItem = randomValueFromArray(insertX);
+    const yItem = randomValueFromArray(insertY);
+    const zItem = randomValueFromArray(insertZ);
+
+
+
+
+
+}
