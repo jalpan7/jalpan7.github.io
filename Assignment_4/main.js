@@ -29,7 +29,16 @@ function result() {
     const yItem = randomValueFromArray(insertY);
     const zItem = randomValueFromArray(insertZ);
 
+    // Replace placeholders in the story with the selected values
+    newStory =newStory.replaceAll(':insertx:', xItem);
+    newStory = newStory.replaceAll(':inserty:', yItem);
+    newStory = newStory.replaceAll(':insertz:', zItem);
 
+    // If a custom name is entered, replace "Bob" with the custom name.
+    if (customName.value !== '') {
+        const name = customName.value;
+        newStory = newStory.replaceAll('Bob', name);
+    }
 
 
 
