@@ -79,10 +79,10 @@ class Ball {
   }
 }
   // Now we will create an array to hold balls and populate it with the 25 random balls.
-  const balls = [];
+ const balls = [];
 
 
-  while (balls.length < 25) {
+ while (balls.length < 25) {
     const size = random(10, 20);
     const ball = new Ball(
       // ball position always drawn at least one ball width
@@ -97,20 +97,18 @@ class Ball {
   
     balls.push(ball);
   }
+  // Function to run the animation loop 
+  function loop() {
+    ctx.fillStyle = "rgb(0 0 0 / 25%)";
+    ctx.fillRect(0, 0, width, height);
+  
+    for (const ball of balls) {
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
+    }
+  
+    requestAnimationFrame(loop);
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
+  loop();
