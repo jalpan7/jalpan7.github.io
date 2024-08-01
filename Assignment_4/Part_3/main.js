@@ -1,10 +1,9 @@
 // Name: Jalpan Patel
 // File: main.js
-// Date: 29 September 2024
+// Date:  01, August 2024
 // Description: Let bounce some balls.
 
 // setup canvas
-
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -25,6 +24,7 @@ function randomRGB() {
 // Ball class definition taken directluy from the script given.
 class Ball {
   constructor(x, y, velX, velY, color, size) {
+    // Initializing ball properties.
     this.x = x;
     this.y = y;
     this.velX = velX;
@@ -37,11 +37,12 @@ class Ball {
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
+    //used math.pi library and used arc to draw the circle 
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
 
-  // Update ball's position(data) and handle the wall collison 
+  // Update ball's position(data) and handle the wall collison with rigth, left, bottom, and top wall.
   update() {
     if ((this.x + this.size) >= width) {
       this.velX = -(this.velX);
@@ -58,7 +59,7 @@ class Ball {
     if ((this.y - this.size) <= 0) {
       this.velY = -(this.velY);
     }
-  
+  // Update ball's position based on itds velocity.
     this.x += this.velX;
     this.y += this.velY;
   }
@@ -69,9 +70,11 @@ class Ball {
       if (this !== ball) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
+        // Calculate the distance between balls using the pythagorean Theorem.
         const distance = Math.sqrt(dx * dx + dy * dy);
   
         if (distance < this.size + ball.size) {
+          // If the balls are touching, change their colors
           ball.color = this.color = randomRGB();
         }
       }
@@ -103,12 +106,15 @@ class Ball {
     ctx.fillRect(0, 0, width, height);
   
     for (const ball of balls) {
+      // Draw each ball
       ball.draw();
+      // Upadte each ball's position
       ball.update();
+      // Upadte each ball's position
       ball.collisionDetect();
     }
   
     requestAnimationFrame(loop);
   }
-
+  // Starts the animation loop  
   loop();
