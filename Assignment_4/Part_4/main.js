@@ -1,7 +1,7 @@
 // Name: Jalpan Patel
 // File: main.js
 // Date:  01, August 2024
-// Description: Let bounce some balls.
+// Description: Part_4 Adding features to our bouncing balls demo.
 
 // setup canvas
 const canvas = document.querySelector("canvas");
@@ -116,5 +116,5 @@ class Ball {
   
     requestAnimationFrame(loop);
   }
-  // Starts the animation loop for the loop  
+  // Starts the animation loop  
   loop();
