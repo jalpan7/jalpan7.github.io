@@ -92,7 +92,7 @@ class EvilCircle extends Shape {
     // set the size of EvilCircle to the 10
     this.size = 10;
   }
-
+  
   // Method to draw the EvilCircle on the canvas
   draw(){
     // Begin a new path for drawing
@@ -104,6 +104,7 @@ class EvilCircle extends Shape {
     // Draw the circle using the arc method.
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.stroke();
+
   }
 // Now we will create an array to hold balls and populate it with the 25 random balls.
  const balls = [];
