@@ -92,10 +92,10 @@ class EvilCircle extends Shape {
     // set the size of EvilCircle to the 10
     this.size = 10;
   }
-  
+
   // Method to draw the EvilCircle on the canvas
   draw(){
-    // Begin a new path for drawing
+    // Begin a path for drawing
     ctx.beginPath();
     // set the line width for the circle's outline
     ctx.lineWidth = 3;
@@ -106,7 +106,27 @@ class EvilCircle extends Shape {
     ctx.stroke();
 
   }
-// Now we will create an array to hold balls and populate it with the 25 random balls.
+  // Method to check and update boundary collisions for the EvilCircle
+  CheckBounds() {
+    // If the EvilCircle hits the right edge It will change the position to the inside boundary.
+    if ((this.x + this.size) >= width) {
+      this.x = width - this.size;
+    }
+    // If the EvilCircle hits the left edge It will change the position to the inside boundary.
+    if ((this.x - this.size) <= 0) {
+      this.x = this.size;
+    }
+    // If the EvilCircle hits the bottom edge, It will change the position to the inside boundary.
+    if ((this.y + this.size) >= height) {
+      this.y = height - this.size;
+    }
+    // If the EvilCircle hits the top edge, It will change the position to the inside boundary.
+    if ((this.y - this.size) <= 0) {
+      this.y = this.size;
+    }
+  }
+  
+  // Now we will create an array to hold balls and populate it with the 25 random balls.
  const balls = [];
 
 
