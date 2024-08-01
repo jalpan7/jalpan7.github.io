@@ -21,16 +21,15 @@ function random(min, max) {
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
-// Ball class definition taken directluy from the script given.
-class Ball {
-  constructor(x, y, velX, velY, color, size) {
+// Shape class definition taken for the purpose of (parent of ball and EvilCircle classes)
+class Shape {
+  constructor(x, y, velX, velY) {
     // Initializing ball properties.
     this.x = x;
     this.y = y;
     this.velX = velX;
     this.velY = velY;
-    this.color = color;
-    this.size = size;
+    
   }
 
   // Added the draw() method to the ball class.
@@ -81,7 +80,32 @@ class Ball {
     }
   }
 }
-  // Now we will create an array to hold balls and populate it with the 25 random balls.
+// EvilCircle class defination (child of shape class)
+// This is the class directly inherits the properties and method from the shape class.
+class EvilCircle extends Shape {
+  // took Constructor to initialize EvilCircle properties.
+  constructor(x, y) {
+    // this will call the parents class with x and y coordinates with the parameters value of 20.
+    super(x, y, 20, 20);
+    // set the color of the EvilCircle to "White".
+    this.color = 'white';
+    // set the size of EvilCircle to the 10
+    this.size = 10;
+  }
+
+  // Method to draw the EvilCircle on the canvas
+  draw(){
+    // Begin a new path for drawing
+    ctx.beginPath();
+    // set the line width for the circle's outline
+    ctx.lineWidth = 3;
+    // set the stroke color to the EvilCircle's color
+    ctx.strokeStyle = this.color;
+    // Draw the circle using the arc method.
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.stroke();
+  }
+// Now we will create an array to hold balls and populate it with the 25 random balls.
  const balls = [];
 
 
