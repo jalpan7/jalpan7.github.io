@@ -62,7 +62,21 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
   }
-
+// adding the collision detection it will make the output more attracting and that make sense.
+// we have added the bunch of code from the MDN server website.
+  collisionDetect() {
+    for (const ball of balls) {
+      if (this !== ball) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+  
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
+      }
+    }
+  }
   
 
 
