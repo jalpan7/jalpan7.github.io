@@ -34,11 +34,17 @@ const newImage = document.createElement('img');
 newImage.setAttribute('src', image);
 newImage.setAttribute('alt', imageAlts);
 thumbBar.appendChild(newImage);
+
 //adding the click event listener to each thumbnail image
-newImage.addEventListener('click', (e) => {
-    // Set the displayed image source and alt text to match the clicked thumbnail
+newImage.addEventListener('click', () => {
+    // When the image is clicked, update the displayed image and its alt text
     displayedImage.setAttribute('src', e.target.getAttribute('src'));
     displayedImage.setAttribute('alt', e.target.getAttribute('alt'));
   });
 }
 /* Wiring up the Darken/Lighten button */
+btn.addEventListener('click', () => {
+    // Get the current class of the button
+    const btnClass = btn.getAttribute('class');
+}
+);
