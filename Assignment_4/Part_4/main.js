@@ -31,6 +31,7 @@ class Shape {
     this.velY = velY;
     
   }
+}
 
   // Added the draw() method to the ball class.
   draw() {
@@ -62,24 +63,6 @@ class Shape {
     this.x += this.velX;
     this.y += this.velY;
   }
-// adding the collision detection it will make the output more attracting and that make sense.
-// we have added the bunch of code from the MDN server website.
-  collisionDetect() {
-    for (const ball of balls) {
-      if (this !== ball) {
-        const dx = this.x - ball.x;
-        const dy = this.y - ball.y;
-        // Calculate the distance between balls using the pythagorean Theorem.
-        const distance = Math.sqrt(dx * dx + dy * dy);
-  
-        if (distance < this.size + ball.size) {
-          // If the balls are touching, change their colors
-          ball.color = this.color = randomRGB();
-        }
-      }
-    }
-  }
-}
 // EvilCircle class defination (child of shape class)
 // This is the class directly inherits the properties and method from the shape class.
 class EvilCircle extends Shape {
@@ -91,10 +74,33 @@ class EvilCircle extends Shape {
     this.color = 'white';
     // set the size of EvilCircle to the 10
     this.size = 10;
+
+    // Added an event listener for the keydown events on the window 
+    window.addEventListener("keydown", (e) => {
+      // Used a switch statement to check which key was pressed.
+      switch (e.key) {
+        // If 'a' is pressed, this move the object left by subtracting velX from x
+        case "a":
+          this.x -= this.velX;
+          break;
+          // If 'd' is pressed, this move th eobject right by adding velX to x 
+        case "d":
+          this.x += this.velX;
+          break;
+          // If 'w' is pressed, move the object up by subtracting velY from y 
+        case "w":
+          this.y -= this.velY;
+          break;
+          // If 's' is pressed, move the object down by adding velY to y
+        case "s":
+          this.y += this.velY;
+          break;
+      }
+    });
   }
 
   // Method to draw the EvilCircle on the canvas
-  draw(){
+  draw() {
     // Begin a path for drawing
     ctx.beginPath();
     // set the line width for the circle's outline
@@ -106,27 +112,41 @@ class EvilCircle extends Shape {
     ctx.stroke();
 
   }
-  // Method to check and update boundary collisions for the EvilCircle
-  CheckBounds() {
-    // If the EvilCircle hits the right edge It will change the position to the inside boundary.
-    if ((this.x + this.size) >= width) {
+  // Checkbound Method to check and update boundary collisions for the EvilCircle
+  checkBounds() {
+    if (this.x + this.size > width) {
       this.x = width - this.size;
-    }
-    // If the EvilCircle hits the left edge It will change the position to the inside boundary.
-    if ((this.x - this.size) <= 0) {
+    } else if (this.x - this.size < 0) {
       this.x = this.size;
     }
-    // If the EvilCircle hits the bottom edge, It will change the position to the inside boundary.
-    if ((this.y + this.size) >= height) {
+
+    if (this.y + this.size > height) {
       this.y = height - this.size;
-    }
-    // If the EvilCircle hits the top edge, It will change the position to the inside boundary.
-    if ((this.y - this.size) <= 0) {
+    } else if (this.y - this.size < 0) {
       this.y = this.size;
     }
   }
-  
-  // Now we will create an array to hold balls and populate it with the 25 random balls.
+
+  // adding the collision detection it will make the output more attracting and that make sense.
+// we have added the bunch of code from the MDN server website.
+collisionDetect() {
+  for (const ball of balls) {
+    if (this !== ball) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      // Calculate the distance between balls using the pythagorean Theorem.
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        // If the balls are touching, change their colors
+        ball.color = this.color = randomRGB();
+      }
+    }
+  }
+}
+}
+
+// Now we will create an array to hold balls and populate it with the 25 random balls.
  const balls = [];
 
 
