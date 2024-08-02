@@ -1,3 +1,7 @@
+// Name: Jalpan Patel
+// File: main.js
+// Date: 01, August 2024
+// Description: Image Gallery
 const displayedImage = document.querySelector('.displayed-img');
 const thumbBar = document.querySelector('.thumb-bar');
 
