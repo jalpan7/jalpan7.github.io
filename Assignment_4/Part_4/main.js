@@ -169,16 +169,17 @@ class EvilCircle extends Shape {
     }
   }
 }
-// Now we will create an array to hold balls and populate it with the 25 random balls.
- const balls = [];
 
-// loop until there are 25 balls. 
- while (balls.length < 25) {
+  // Now we will create an array to hold balls and populate it with the 25 random balls.
+  const balls = [];
+
+  // loop until there are 25 balls. 
+  while (balls.length < 25) {
   // Generate the random size to the ball.
     const size = random(10, 20);
     const ball = new Ball(
-// ball position always drawn at least one ball width
-// away from the edge of the canvas, to avoid drawing errors
+  // ball position always drawn at least one ball width
+  // away from the edge of the canvas, to avoid drawing errors
       random(0 + size, width - size),
       random(0 + size, height - size),
       random(-7, 7),
@@ -192,18 +193,18 @@ class EvilCircle extends Shape {
     balls.push(ball);
   }
 
-// Create an EvilCircle instance with the starting point 50.
-const evilCircle = new EvilCircle(50, 50);
+  // Create an EvilCircle instance with the starting point 50.
+  const evilCircle = new EvilCircle(50, 50);
 
-// Create a score counter element
-// Creating a paragraph element for the score.
-const scoreElement = document.createElement('p');
-scoreElement.textContent = `Ball count: ${balls.length}`;
-// adding the score elemetnto the document
-document.body.appendChild(scoreElement);
+  // Create a score counter element
+  // Creating a paragraph element for the score.
+  const scoreElement = document.createElement('p');
+  scoreElement.textContent = `Ball count: ${balls.length}`;
+  // adding the score elemetnto the document
+  document.body.appendChild(scoreElement);
 
-// Function to run the animation loop 
-function loop() {
+  // Function to run the animation loop 
+  function loop() {
   // Clear the canvas with a semi-transparent black rectangle
   ctx.fillStyle = "rgb(0 0 0 / 25%)";
   ctx.fillRect(0, 0, width, height);
@@ -219,13 +220,13 @@ function loop() {
       ball.collisionDetect();
     }
   }
-// EvilCircle used for Draw, Check bounds, and check collision.
-// drawing evilCircle
-evilCircle.draw();
-// making sure to stay evilCircle within canvas
-evilCircle.checkBounds();
-// looking for checking collision.
-evilCircle.collisionDetect();
+  // EvilCircle used for Draw, Check bounds, and check collision.
+  // drawing evilCircle
+  evilCircle.draw();
+  // making sure to stay evilCircle within canvas
+  evilCircle.checkBounds();
+  // looking for checking collision.
+  evilCircle.collisionDetect();
 
   // Update score
   scoreElement.textContent = `Ball count: ${balls.filter(ball => ball.exists).length}`;
