@@ -26,9 +26,11 @@ for (let i = 0; i < imageFilenames.length; i++) {
 // get the current filename from ther array
     const filename = imageFilenames[i];
 
+
 // create a new image elements.
 const newImage = document.createElement('img');
 
+// Set the source and alt attributes of the new image.
 newImage.setAttribute('src', image);
 newImage.setAttribute('alt', imageAlts);
 thumbBar.appendChild(newImage);
@@ -38,5 +40,5 @@ newImage.addEventListener('click', (e) => {
     displayedImage.setAttribute('src', e.target.getAttribute('src'));
     displayedImage.setAttribute('alt', e.target.getAttribute('alt'));
   });
-});
+}
 /* Wiring up the Darken/Lighten button */
