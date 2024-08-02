@@ -44,7 +44,13 @@ newImage.addEventListener('click', () => {
 }
 /* Wiring up the Darken/Lighten button */
 btn.addEventListener('click', () => {
-    // Get the current class of the button
+// Get the current class of the button
     const btnClass = btn.getAttribute('class');
-}
-);
+
+// Toggle between dark and light mode based on the button's current class
+    if (btnClass === 'dark') {
+// If the button is in dark mode, switch to light mode
+        btn.setAttribute('class', 'light');
+        btn.textContent = 'Lighten';
+        // Apply dark overlay
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
