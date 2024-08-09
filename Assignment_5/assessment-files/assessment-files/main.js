@@ -1,3 +1,9 @@
+//  Name: Jalpan Patel
+// 	File: main.js
+// 	Date: 08, August, 2024
+// 	Description:  Welcome to our wildlife website.
+
+
 // functionality for showing/hiding the comments section
 
 const showHideBtn = document.querySelector('.show-hide');
